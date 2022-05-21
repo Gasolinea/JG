@@ -1,0 +1,128 @@
+.nav{
+    height: 50px;
+}
+.nav p{
+    line-height: 50px;
+    color: #999;
+    font-size: 13px;
+    margin-left: 270px;
+}
+.con{
+    width: 740px;
+    /* height: 800px; */
+    background-color:rgb(255, 255, 255);
+    margin: auto;
+    position: relative;
+    right: 100px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+body{
+    background-color:rgb(247, 247, 247) ;
+}
+.right1{
+    width: 250px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 127px;
+    right: 224px;
+    border-radius: 8px;
+   
+}
+.message .pic{
+    background: url(./../img/bg2.jpg) no-repeat;
+    padding-left: 25px;
+    display: inline-block;
+   height: 25px;
+   border-radius: 50%;
+   margin-right: 10px;
+}
+.message  span.name,.message span.time{
+    line-height: 30px;
+    color: #999;
+     position: relative;
+     bottom: 10px;
+}
+.message span.time{
+    float: right;
+    top: 1px;
+}
+
+.message{
+    /* background-color: aqua; */
+    height: 50px;
+    margin-top: 20px;
+    border-bottom: 1px solid #999;
+   
+}
+.f1 p{
+    margin-top: 20px;
+    font-size: 14px;
+}
+.cfont p{
+    font-size: 15px;
+}
+.pic2{
+    margin:20px 0 20px ;
+    
+}
+.pic2 img{
+    width: 100%;
+}
+.cfoot{
+    margin: 20px;
+    margin-top: 40px;
+     color: #999;
+}
+.cfont p{
+    margin: 20px;
+   
+}
+.right1 .liking{
+    width: 50%;
+    border-right: 1px solid rgb(226, 221, 221);
+    height: 100%;
+   overflow: hidden;
+}
+.right1{
+    /* position: relative; */
+}
+ .liking,.sharing{
+     position: relative;
+ }
+ .sharing{
+     width: 50%;
+     height: 100%;
+     float: right;
+     /* background-color: aqua; */
+     position: relative;
+     bottom: 100%;
+ }
+ .liking p,.sharing p{
+     position: absolute;
+     color: #999;
+     font-size: 16px;
+   left: 50%;
+   transform: translate(-50%);
+   top: 60%;
+ }
+ .liking::after{
+     content: '';
+     display: block;
+     background: url(./img/xinRedo.png) no-repeat;
+     width: 30px;
+     height: 30px;
+     margin: auto;
+     margin-top: 30px;
+ }
+
+ .sharing::after{
+    content: '';
+    display: block;
+    background: url(./img/share_yj1.png) no-repeat;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    margin-top: 30px;
+}

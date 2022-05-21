@@ -1244,6 +1244,8 @@ nav .on a {
 
 /**�ײ�**/
 .foot {
+    /* position: absolute; */
+    /* width: 100%; */
     background: #505050;
     color: #a3a3a3;
 }

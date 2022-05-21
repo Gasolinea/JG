@@ -107,17 +107,27 @@ body{
    transform: translate(-50%);
    top: 60%;
  }
- .liking::after{
+ .liking a{
      content: '';
      display: block;
      background: url(./img/xinRedo.png) no-repeat;
      width: 30px;
      height: 30px;
      margin: auto;
-     margin-top: 30px;
+     margin-top: 30px;   
  }
+ .liking a.index{
+    content: '';
+    display: block;
+    background: url(./img/xinRedh.png) no-repeat;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    margin-top: 30px;
+}
 
- .sharing::after{
+
+ .sharing a{
     content: '';
     display: block;
     background: url(./img/share_yj1.png) no-repeat;
@@ -126,3 +136,16 @@ body{
     margin: auto;
     margin-top: 30px;
 }
+
+.sharing a.index1{
+    content: '';
+    display: block;
+    background: url(./img/shareh_yj1.png) no-repeat;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+
+

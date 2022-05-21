@@ -85,9 +85,7 @@ body{
     height: 100%;
    overflow: hidden;
 }
-.right1{
-    /* position: relative; */
-}
+
  .liking,.sharing{
      position: relative;
  }

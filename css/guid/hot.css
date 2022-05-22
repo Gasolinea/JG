@@ -40,15 +40,15 @@
 }
 .con{
     width: 100%;
-    background-color: #F7F7F7;
-    height: 800px;
+    background-color: #c34646;
+    /* height: 800px; */
 }
 .con ul{
     width: 80%;
-    height: 100%;
-    /* background-color: antiquewhite; */
+    background-color: antiquewhite;
     margin: auto;
    margin-top: 10px;
+   height: 283px;
 }
 .con ul li{
     width: 23%;
@@ -78,8 +78,8 @@
     margin: 0;
     padding: 0;
 }
-.x{
-    background: url(./img/xin.png) no-repeat 0px 3px;
+ .con ul li .x{
+    background: url(./../img/xin.png) no-repeat 0px 3px;
     padding-left: 15px;
    height: 20px;
    line-height: 20px;
@@ -90,8 +90,8 @@
    /* background-color: antiquewhite; */
    color: #999;
 }
-.message{
-    background: url(./img/reply.png) no-repeat 0px 3px;
+  .con ul li .message{
+    background: url(./../img/reply.png) no-repeat 0px 3px;
     padding-left: 15px;
    height: 20px;
    line-height: 20px;
@@ -102,8 +102,8 @@
    /* background-color: antiquewhite; */
    color: #999;
 }
-.x1{
-    background: url(./img/xin.png) no-repeat 0px 3px;
+ .con ul li  .x1{
+    background: url(./../img/xin.png) no-repeat 0px 3px;
     padding-left: 15px;
    height: 20px;
    line-height: 20px;
@@ -114,8 +114,8 @@
    /* background-color: antiquewhite; */
    color: #999;
 }
-.message1{
-    background: url(./img/reply.png) no-repeat 0px 3px;
+.con ul li  .message1{
+    background: url(./../img/reply.png) no-repeat 0px 3px;
     padding-left: 15px;
    height: 20px;
    line-height: 20px;
@@ -151,6 +151,32 @@
      border-radius: 0 0 6px 6px ;
      border: 1px solid rgb(237, 229, 229);
 
+}
+.more{
+    height: 100px;
+    background-color: aliceblue;
+}
+.more::after{
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-right: 1px solid red;
+    border-bottom: 1px solid red;
+    transform:rotate(45deg);
+    margin: auto;
+  position: relative;
+ bottom: 59px;
+ right: 65px;
+}
+.more p{
+  
+    font-size: 17px;
+  text-align: center;
+  line-height: 100px;
+}
+.more p a{
+    color: #FE536A;
 }
 
 

@@ -185,6 +185,43 @@
    left: 20px;
    display: inline;
 }
+.circle{
+    width: 26px;
+    height: 25px;
+    border: 2px solid rgb(240, 21, 32);
+    margin: auto;
+    border-radius: 50%;
+    /* border-bottom: none; */
+    border-right: none;
+    /* margin-bottom: 30px; */
+   animation-name: move;
+   animation-iteration-count: infinite;
+   animation-duration: 1s;
+   /* position: absolute; */
+   position: relative;
+   bottom: 30px;
+}
+@keyframes move{
+     0%{}
+     100%{
+         transform: rotate(180deg);
+     }
+}
+.cf{
+    position: relative;
+    bottom: 73px;
+    height: 40px;
+    left: -50px;
+}
+.cf p{
+    text-align: center;
+    line-height: 40px;
+    position: relative;
+    left: 70px;
+    color: rgb(240, 21, 32);
+    font-size: 14px;
+    top: 10px;
+}
 
 
 

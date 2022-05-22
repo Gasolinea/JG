@@ -28,7 +28,17 @@
               console.log(data);
    
               // 调用渲染数据的函数
-              render(data);
+             
+              var nihao=document.getElementsByClassName('cf')[0]
+              console.log(nihao);
+              nihao.style.display='block';   
+              more.children[0].style.display='none';
+              // 调用渲染数据的函数
+             setTimeout(fn,1000)
+             function fn(){      
+                render(data)
+             }
+            
             }
         }
     }

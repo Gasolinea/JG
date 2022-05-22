@@ -14,7 +14,9 @@
   var mnew=document.getElementsByClassName('mnew')[0]
   var more=document.getElementsByClassName('more')[0]
    
+    
    more.onclick=function(){
+     
     var ajax_=new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
     ajax_.open('get','http://localhost:3000/play/new');
     ajax_.send();
@@ -24,9 +26,18 @@
               var str= ajax_.responseText;
               var data = JSON.parse(ajax_.responseText);
               console.log(data);
-   
+
+              var nihao=document.getElementsByClassName('cf')[0]
+              console.log(nihao);
+              nihao.style.display='block';   
+              more.children[0].style.display='none';
               // 调用渲染数据的函数
-              render(data);
+             setTimeout(fn,1000)
+             function fn(){      
+                render(data)
+             }
+            
+                
             }
         }
     }

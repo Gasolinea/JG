@@ -40,12 +40,12 @@
 }
 .con{
     width: 100%;
-    background-color: #c34646;
+    /* background-color: #c34646; */
     /* height: 800px; */
 }
 .con ul{
     width: 80%;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     margin: auto;
    margin-top: 10px;
    height: 283px;
@@ -85,7 +85,7 @@
    line-height: 20px;
    float: right;
    position: relative;
-   top: 21px;
+   top: 12px;
    left: -59px;
    /* background-color: antiquewhite; */
    color: #999;
@@ -97,7 +97,7 @@
    line-height: 20px;
    float: right;
    position: relative;
-   top: 21px;
+   top: 12px;
    left: -5px;
    /* background-color: antiquewhite; */
    color: #999;
@@ -109,7 +109,7 @@
    line-height: 20px;
    float: right;
    position: relative;
-   top: 43px;
+   top: 30px;
    left: -59px;
    /* background-color: antiquewhite; */
    color: #999;
@@ -121,7 +121,7 @@
    line-height: 20px;
    float: right;
    position: relative;
-   top: 43px;
+   top: 30px;
    left: -5px;
    /* background-color: antiquewhite; */
    color: #999;
@@ -154,7 +154,7 @@
 }
 .more{
     height: 100px;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
 }
 .more::after{
     content: '';

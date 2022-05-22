@@ -40,12 +40,12 @@
 }
 .con{
     width: 100%;
-    background-color: #c34646;
+    /* background-color: #c34646; */
     /* height: 800px; */
 }
 .con ul{
     width: 80%;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     margin: auto;
    margin-top: 10px;
    height: 283px;
@@ -154,7 +154,7 @@
 }
 .more{
     height: 100px;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
 }
 .more::after{
     content: '';

@@ -108,7 +108,7 @@ body{
  .liking a{
      content: '';
      display: block;
-     background: url(./img/xinRedo.png) no-repeat;
+     background: url(./../img/xinRedo.png) no-repeat;
      width: 30px;
      height: 30px;
      margin: auto;
@@ -117,7 +117,7 @@ body{
  .liking a.index{
     content: '';
     display: block;
-    background: url(./img/xinRedh.png) no-repeat;
+    background: url(./../img/xinRedh.png) no-repeat;
     width: 30px;
     height: 30px;
     margin: auto;
@@ -128,7 +128,7 @@ body{
  .sharing a{
     content: '';
     display: block;
-    background: url(./img/share_yj1.png) no-repeat;
+    background: url(./../img/share_yj1.png) no-repeat;
     width: 30px;
     height: 30px;
     margin: auto;
@@ -138,7 +138,7 @@ body{
 .sharing a.index1{
     content: '';
     display: block;
-    background: url(./img/shareh_yj1.png) no-repeat;
+    background: url(./../img/shareh_yj1.png) no-repeat;
     width: 30px;
     height: 30px;
     margin: auto;

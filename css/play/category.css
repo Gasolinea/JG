@@ -1,0 +1,144 @@
+.t1{
+    font-size: 40px;
+    text-align: center;
+    margin: 30px;
+    position: relative;
+    right: 190.5px;
+}
+nav ul{
+    /* position: absolute; */
+  position: relative;
+  bottom: 65px;
+  left: 132px;
+}
+.tab{
+    height: 50px;
+    /* background-color: antiquewhite; */
+    font-size: 18px;
+    text-align: center;
+   
+}
+.tab .mnew,.tab .mhot{
+    width: 160px;
+    display: inline-block;
+    margin: 0 10px 0 10px;
+    line-height: 50px;
+    color: #999;
+    text-align: center;
+    margin: auto;
+   
+}
+
+.index{
+    width: 160px;
+    display: inline-block;
+    margin: 0 10px 0 10px;
+    line-height: 50px;
+    color: #999;
+    margin: auto;
+}
+.index1{
+    width: 160px;
+    display: inline-block;
+    margin: 0 10px 0 10px;
+    line-height: 50px;
+    color: #999;
+    border-bottom: 5px solid #FE5431;
+    margin: auto; 
+}
+
+  *{
+      margin: 0;
+      padding: 0;
+  }
+
+
+
+
+.con1{
+    width: 70%;
+    height: 530px;
+     background-color: rgb(255, 255, 255);
+     margin: auto;
+
+}
+.con{
+    width: 70%;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    margin:40px auto;
+    position: relative;
+}
+body{
+    background-color: rgb(245, 245, 245);
+}
+.left{
+    width: 100px;
+    height: 40px;
+    /* background-color: #FE5431; */
+    display: inline-block;
+    margin-top: 10px;
+    border-left: 5px solid red;
+    font-size: 16px;
+    position: absolute;
+}
+.left span{
+    position: relative;
+    left: 30px;
+    top: 5px;
+}
+.con1 .cu1{
+/* background-color: #999; */
+height: 360px;
+border-bottom: 1px dashed #999;
+}
+.con1 .cu1 li{
+    width: 132px;
+    height: 131px;
+    /* background-color: rgb(141, 43, 131); */
+    margin:20px 10px;
+    float: left;
+    border-radius: 50%;
+    position: relative;
+    left: 80px;
+    top: 10px;
+}
+.con1 .cu1 li img{
+    width: 100%;
+    height: 100%;
+}
+.con1 .cu1 li span{
+    color: #999;
+    position: relative;
+    left: 35px;
+    font-size: 14px;
+    display: inline-block;
+    margin: 4px;
+}
+
+.con1 .cu1 li:first-of-type span,
+.con1 .cu1 li:nth-of-type(3) span{
+    /* color: #FE5431; */
+    left: 20px;
+}
+.con1 .cu2 li{
+    float: left;
+    width: 150px;
+    font-size: 16px;
+    height: 30px;
+    /* background-color: #999; */
+    margin: 10px;
+    text-align: center;
+    color: #999;
+}
+.con1 .cu2 li:hover{
+    color: #FE5431;
+    cursor: pointer;
+}
+.cu3{
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    border-top: 1px dashed #999;
+    width: 100%;
+}

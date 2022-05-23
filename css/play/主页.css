@@ -185,7 +185,7 @@
    left: 20px;
    display: inline;
 }
- .circle{
+.circle{
     width: 26px;
     height: 25px;
     border: 2px solid rgb(240, 21, 32);
@@ -222,11 +222,6 @@
     font-size: 14px;
     top: 10px;
 }
-/* .simple{
-   width:400px;
-   background-color: rgb(212, 171, 171);
-} */
-
 .con ul li img:hover{
     animation-name: round;
     animation-duration: 1.5s;
@@ -243,26 +238,42 @@
          opacity: .9;
      }
  }
+
  .back{
-     height: 100px;
-     width: 100px;
-     /* background-color: #f0e9ea; */
-     position: fixed;  
-     bottom: 0px;
-      right: 20px;
- }
- .back p{
-     color: white;
-     text-align: center;
-     line-height: 100px;
-     font-size: 16px;
- }
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+}
+.back p{
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    font-size: 16px;
+}
 .back img{
-    width: 50px;
-  display: block;
-  margin: auto;
-  margin-top: 20px;
+   width: 50px;
+ display: block;
+ margin: auto;
+ margin-top: 20px;
  border-radius: 50%;
 }
-
+.bpic{
+    width: 100%;
+    height: 300px;
+    background-color: #999;
+    background: url(./../img/original.jpg) -150px 0px;
+}
+.swiper {
+    width: 800px;
+    height: 200px;
+    background-color: #999;
+    margin: auto;
+    margin: 10px;
+}  
+.swiper img{
+    width: 100%;
+    height: 100%;
+}
 

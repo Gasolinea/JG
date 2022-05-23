@@ -169,12 +169,36 @@
                </ul>
                `   
            }
+            // 0
+         str+=`
+         <div class="back">
+         <img src="./../css/img/top.webp" alt="">
+         <!-- <p>返回顶部</p> -->
+          </div>
+         `
            var  con=document.getElementsByClassName('con')[0];
            // var ul=document.getElementsByTagName('ul')[0]
            // console.log(str);
            // ul.innerHTML=str
            con.innerHTML=str;
+  
+           var back=document.getElementsByClassName('back')[0];
+           window.onscroll=function(){
+           var top=document.documentElement.scrollTop ;
+           back.onclick=function(){
+             var timer=setInterval(function(){
+              var top_=document.documentElement.scrollTop ;
+              var speed=Math.floor(-top/7)
+              document.documentElement.scrollTop=top_+speed;
+              if(top_==0){
+                  clearInterval(timer)
+              }
+             },50)
+            }
+           }
        }
+
+     
    }
 
 

@@ -19,7 +19,7 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">首页</a></li>
+                    <li><a href="./主页.html">首页</a></li>
                     <li><a href="./index.html">酷玩</a></li>
                     <li><a href="./../guid导航/index(new).html">导购</a></li>
                     <li><a href="use/index.html">试用</a></li>
@@ -290,6 +290,11 @@
             <li>蒸面器&nbsp;(21)</li>
             <li>加湿器&nbsp;(21)</li>
         </ul>  
+
+        <div class="back">
+            <img src="./../css/img/top.webp" alt="">
+            <!-- <p>返回顶部</p> -->
+        </div>
      </div>
 
     <!-- 底部 -->
@@ -342,3 +347,22 @@
 </body>
 
 </html>
+<script>
+  
+    
+    var back=document.getElementsByClassName('back')[0];
+           window.onscroll=function(){
+           var top=document.documentElement.scrollTop ;
+           back.onclick=function(){
+             var timer=setInterval(function(){
+              var top_=document.documentElement.scrollTop ;
+              var speed=Math.floor(-top/7)
+              document.documentElement.scrollTop=top_+speed;
+              if(top_==0){
+                  clearInterval(timer)
+              }
+             },50)
+            }
+           }
+
+</script>

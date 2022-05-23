@@ -18,7 +18,7 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">首页</a></li>
+                    <li><a href="./../play酷玩/主页.html">首页</a></li>
                     <li><a href="./../play酷玩/index.html">酷玩</a></li>
                     <li><a href="./index(new).html">导购</a></li>
                     <li><a href="use/index.html">试用</a></li>
@@ -156,7 +156,10 @@
       <a href="" class="sa"> <span> <p class="sp">分享</p> </span></a>
       </div>
      </div>
-     
+     <div class="back">
+        <img src="./../css/img/top.webp" alt="">
+        <!-- <p>返回顶部</p> -->
+    </div>
     <!-- 底部 -->
     <footer class="foot">
         <section class="wrap">
@@ -210,3 +213,20 @@
 
 </html>
 <script src="./../js/guid/detail.js"></script> 
+<script>
+    
+    var back=document.getElementsByClassName('back')[0];
+           window.onscroll=function(){
+           var top=document.documentElement.scrollTop ;
+           back.onclick=function(){
+             var timer=setInterval(function(){
+              var top_=document.documentElement.scrollTop ;
+              var speed=Math.floor(-top/7)
+              document.documentElement.scrollTop=top_+speed;
+              if(top_==0){
+                  clearInterval(timer)
+              }
+             },50)
+            }
+           }
+</script>

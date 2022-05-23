@@ -1,0 +1,11 @@
+.focus {
+    background: url(./img/original.jpg) no-repeat center top;
+    height: 300px;
+    overflow: hidden;
+}
+
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: right;
+}

@@ -32,6 +32,48 @@
             <a href="" class="search right">搜索</a>
         </div>
     </header>
+    <!--酷玩top-->
+    <section class="wrap play-top">
+        <h1>免费试用</h1>
+        <nav class="play-nav">
+            <a href="javascript:void(0);" class="on" style="color: red;">大众试用</a>
+            <a href="tyss.html">体验师专享</a>
+        </nav>
+    </section>
+    <section class="use-box">
+        <div class="wrap use-nav">
+            <a href="index.html">全部</a>
+            <a href="sq.html">申请中</a>
+            <a href="sy.html">试用中</a>
+            <a href="javascript:void(0);" class="on" style="color: red;">已结束</a>
+        </div>
+    </section>
+    <!-- 大众试用已结束 -->
+    <section class="report-box">
+        <div class="wrap use common pad25">
+            <dl>
+                <!-- 1111 -->
+                <!-- <dt>
+                    <a href="detail.html">
+                        <span class="top-tip tys">体验师专享</span>
+                        <img src="../img/hot2.jpg" width="220" height="130" />
+                        <div class="hot-con">
+                            <h2 class="name">Osprey小鹰户外运动专业腰包</h2>
+                            <p class="tabs graw">
+                                <span>2032</span>
+                                <span>20台</span>
+                            </p>
+                            <p class="sq"><span>1392</span>申请</p>
+                            <p class="current graw">查看试用名单</p>
+                        </div>
+                    </a>
+                </dt> -->
+            </dl>
+            <div class="playMore">
+                <span class="no-more">没有更多啦~</span>
+            </div>
+        </div>
+    </section>
     <!-- 底部 -->
     <footer class="foot">
         <section class="wrap">
@@ -82,3 +124,50 @@
 </body>
 
 </html>
+<script>
+
+    function show() {
+        var ajax_ = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
+        ajax_.open('get', 'http://127.0.0.1:3000/useing/master')
+        ajax_.send();
+        ajax_.onreadystatechange = function () {
+            if (ajax_.readyState == 4) {
+                if (ajax_.status == 200) {
+                    // 接收响应数据   转为对象
+                    var data = JSON.parse(ajax_.responseText);
+                    console.log(data);
+                    ym(data);
+                } else {
+                    console.log('请求失败');
+                }
+            }
+        }
+    }
+    //渲染数据
+    function ym(data) {
+        var str = '';
+        for (var item of data) {
+            console.log(item);
+            str += `      <dt>
+                    <a href="detail.html">
+                        <span class="top-tip tys">${item.info_ty}</span>
+                        <img src="${item.img}" width="220" height="130" />
+                        <div class="hot-con">
+                            <h2 class="name">${item.text}</h2>
+                            <p class="tabs graw">
+                                <span>${item.totalnum}</span>
+                                <span>${item.num}</span>
+                            </p>
+                            <p class="sq"><span>${item.apply}</span>申请</p>
+                            <p class="current graw">查看试用名单</p>
+                        </div>
+                    </a>
+                </dt>
+
+`;
+            var dl = document.getElementsByTagName('dl')[0];
+            dl.innerHTML = str;
+        }
+    }
+    show();
+</script>

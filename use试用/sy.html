@@ -31,6 +31,47 @@
             <a href="" class="search right">搜索</a>
         </div>
     </header>
+    <!--酷玩top-->
+    <section class="wrap play-top">
+        <h1>免费试用</h1>
+        <nav class="play-nav">
+            <a href="javascript:void(0);" class="on">大众试用</a>
+            <a href="tyss.html">体验师专享</a>
+        </nav>
+    </section>
+    <section class="use-box">
+        <div class="wrap use-nav">
+            <a href="index.html">全部</a>
+            <a href="javascript:void(0);" class="on">申请中</a>
+            <a href="sy.html" style="color: red;">试用中</a>
+            <a href="end.html">已结束</a>
+        </div>
+    </section>
+    <!-- 试用中 -->
+    <section class="report-box">
+        <div class="wrap use common pad25">
+            <dl>
+                <!-- <dt>
+                    <a href="detail.html">
+                        <span class="top-tip shoufa">首发</span>
+                        <img src="../img/hot7.jpg" width="220" height="130" />
+                        <div class="hot-con">
+                            <h2 class="name">Liquid Image 338 运动摄像眼镜</h2>
+                            <p class="tabs green">
+                                <span>2032</span>
+                                <span>20台</span>
+                            </p>
+                            <p class="sq"><span>1392</span>申请</p>
+                            <p class="current green">剩余时间2天</p>
+                        </div>
+                    </a>
+                </dt> -->
+            </dl>
+            <div class="playMore">
+                <span class="no-more">没有更多啦~</span>
+            </div>
+        </div>
+    </section>
     <!-- 底部 -->
     <footer class="foot">
         <section class="wrap">
@@ -48,12 +89,15 @@
                 </dl>
                 <dl>
                     <dt>友情链接</dt>
-                    <dd><a href="http://www.zhidx.com/">智东西</a><a href="http://www.weibusi.net/">WEIBUSI</a></dd>
+                    <dd><a href="http://www.zhidx.com/">智东西</a><a href="http://www.weibusi.net/">WEIBUSI</a>
+                    </dd>
                     <dd><a href="http://it.sohu.com/">搜狐IT</a><a href="http://tech.qq.com/">腾讯科技</a></dd>
-                    <dd><a href="http://digi.it.sohu.com/">搜狐数码</a><a href="http://tech.ifeng.com/">凤凰科技</a></dd>
+                    <dd><a href="http://digi.it.sohu.com/">搜狐数码</a><a href="http://tech.ifeng.com/">凤凰科技</a>
+                    </dd>
                     <dd><a href="http://digi.ifeng.com/">凤凰数码</a><a href="http://product.pconline.com.cn/">PConline</a>
                     </dd>
-                    <dd><a href="http://www.pcpop.com/">泡泡网</a><a href="http://www.3wcoffee.com/">3W咖啡</a></dd>
+                    <dd><a href="http://www.pcpop.com/">泡泡网</a><a href="http://www.3wcoffee.com/">3W咖啡</a>
+                    </dd>
                     <dd><a href="http://bbs.zuk.cn/">ZUK社区</a><a href="http://emie.com/">亿觅emie</a></dd>
                     <dd><a href="http://www.geekpark.net/">极客公园</a><a href="http://zdm.yixun.com/index.html">易迅易启玩</a>
                     </dd>
@@ -81,3 +125,47 @@
 </body>
 
 </html>
+<script>
+    function showData() {
+        var ajax_ = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
+        ajax_.open('get', 'http://127.0.0.1:3000/useing/public', true);
+        ajax_.send();
+        ajax_.onreadystatechange = function () {
+            if (ajax_.readyState == 4) {
+                if (ajax_.status == 200) {
+                    //接收响应数据  转为对象
+                    var data = JSON.parse(ajax_.responseText);
+                    console.log(data);
+                    show(data);
+                } else {
+                    console.log('请求失败');
+                }
+            }
+        }
+    }
+    function show(data) {
+        var str = '';
+        for (i = 0; i < 12; i++) {
+            str += `
+<dt>
+                    <a href="detail.html">
+                        <span class="top-tip shoufa">${data[i].info_ty}</span>
+                        <img src="${data[i].img}" width="220" height="130" />
+                        <div class="hot-con">
+                            <h2 class="name">${data[i].text}</h2>
+                            <p class="tabs green">
+                                <span>${data[i].totalnum}</span>
+                                <span>${data[i].num}</span>
+                            </p>
+                            <p class="sq"><span>${data[i].apply}</span>申请</p>
+                            <p class="current green">剩余时间2天</p>
+                        </div>
+                    </a>
+                </dt>
+`;
+        }
+        var dl = document.getElementsByTagName("dl")[0];
+        dl.innerHTML = str;
+    }
+    showData()
+</script>

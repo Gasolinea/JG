@@ -16,14 +16,14 @@
     <header class="header">
         <div class="wrap fix">
             <div class="logo left">
-                <a href="index.html"><img src="./../img/logonew.png" width="132" /></a>
+                <a href="index.html"><img src="./../../img/logonew.png" width="132" /></a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="./../play酷玩/主页.html">首页</a></li>
-                    <li><a href="./../play酷玩/index.html">酷玩</a></li>
-                    <li><a href="./../guid导航/index(new).html">导购</a></li>
-                    <li><a href="./../use试用/detail.html">试用</a></li>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="play/index.html">酷玩</a></li>
+                    <li><a href="guid/index.html">导购</a></li>
+                    <li><a href="use/index.html">试用</a></li>
                     <li><a href="report/index.html">报告</a></li>
                 </ul>
             </nav>
@@ -31,55 +31,13 @@
             <a href="" class="search right">搜索</a>
         </div>
     </header>
-    <!--酷玩top-->
-    <section class="wrap play-top">
-        <h1>免费试用</h1>
-        <nav class="play-nav">
-            <a href="javascript:void(0);" class="on">大众试用</a>
-            <a href="tyss.html">体验师专享</a>
-        </nav>
-    </section>
-    <section class="use-box">
-        <div class="wrap use-nav">
-            <a href="index.html">全部</a>
-            <a href="javascript:void(0);" class="on" style="color: red;">申请中</a>
-            <a href="sy.html">试用中</a>
-            <a href="end.html">已结束</a>
-        </div>
-    </section>
-    <!-- 申请中 -->
-    <section class="report-box">
-        <div class="wrap use common pad25">
-            <dl>
-                <!-- 1111 -->
-                <!-- <dt>
-                <a href="detail.html">
-                    <span class="top-tip tys">体验师专享</span>
-                    <img src="../img/hot2.jpg" width="220" height="130" />
-                    <div class="hot-con">
-                        <h2 class="name">Osprey小鹰户外运动专业腰包</h2>
-                        <p class="tabs graw">
-                            <span>2032</span>
-                            <span>20台</span>
-                        </p>
-                        <p class="sq"><span>1392</span>申请</p>
-                        <p class="current graw">查看试用名单</p>
-                    </div>
-                </a>
-            </dt> -->
-            </dl>
-            <div class="playMore">
-                <span class="no-more">没有更多啦~</span>
-            </div>
-        </div>
-    </section>
     <!-- 底部 -->
     <footer class="foot">
         <section class="wrap">
             <div class="fix">
-                <dl><img src="./../img/code.png" width="160" height="160" /></dl>
+                <dl><img src="./../../img/code.png" width="160" height="160" /></dl>
                 <dl>
-                    <dt><img src="./../img/logoImg.jpg" /></dt>
+                    <dt><img src="./../../img/logoImg.jpg" /></dt>
                     <dd>全球酷玩试用导购平台<br>酷·新奇·好玩·品质</dd>
                     <dd>微信添加“JguoJguo” <br>获取我们的服务。</dd>
                 </dl>
@@ -123,49 +81,3 @@
 </body>
 
 </html>
-<script>
-
-    function showData() {
-        var ajax_ = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
-        ajax_.open('get', 'http://127.0.0.1:3000/useing/public', true);
-        ajax_.send();
-        ajax_.onreadystatechange = function () {
-            if (ajax_.readyState == 4) {
-                if (ajax_.status == 200) {
-                    //接收响应数据  转为对象
-                    var data = JSON.parse(ajax_.responseText);
-                    console.log(data);
-                    show(data);
-                } else {
-                    console.log('请求失败');
-                }
-            }
-        }
-    }
-    //渲染数据
-    function show(data) {
-        //模板字符串
-        var str = '';
-        for (i = 0; i < 11; i++) {
-            str += '<dt>'
-            str += '<a href="guid/detail.html">'
-            str += '<span class="top-tip shoufa">' + data[i].info_ty + '</span>'
-            str += '<img src="' + data[i].img + '" width="220" height="130" />'
-            str += '<div class="hot-con">'
-            str += '<h2 class="name">' + data[i].text + '</h2>'
-            str += '<p class="tabs red">'
-            str += '<span>' + data[i].totalnum + '</span>'
-            str += '<span>' + data[i].num + '</span>'
-            str += '</p>'
-            str += '<p class="sq"><span>' + data[i].apply + '</span>申请</p>'
-            str += '<p class="current red">剩余时间2天</p>'
-            str += '</div>'
-            str += '</a>'
-            str += '</dt>'
-        }
-        var dl = document.getElementsByTagName("dl")[0];
-        dl.innerHTML = str;
-    }
-    // }
-    showData() 
-</script>

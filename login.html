@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>guid导航hot</title>
-    <link rel="stylesheet" href="./../css/common.css">
-    <link rel="stylesheet" href="./../css/style.css">
-    <link rel="stylesheet" href="./../css/themes.css">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/themes.css">
+    <link rel="stylesheet" href="./css/dl.css">
+
 </head>
 
 <body>
@@ -16,7 +18,7 @@
     <header class="header">
         <div class="wrap fix">
             <div class="logo left">
-                <a href="index.html"><img src="./../img/logonew.png" width="132" /></a>
+                <a href="index.html"><img src="./img/logonew.png" width="132" /></a>
             </div>
             <nav>
                 <ul>
@@ -31,13 +33,33 @@
             <a href="" class="search right">搜索</a>
         </div>
     </header>
+
+
+    <section class="report-box regMain">
+        <div class="wrap regBox">
+            <h2 class="title">注册极果</h2>
+            <form class="regForm" name="my_f1" action="" method="post">
+                <p><input type="text" placeholder="请输入admin，建议中文" pattern="[A-Za-z0-9_\-\u4e00-\u9fa5]+"
+                        required="required" class="userName" /></p>
+
+                <input type="password" placeholder="请6-16输入密码，数字字母组成(123456)" required="required" class="password">
+
+                <p class="check"><input type="checkbox" id="checkeds" class="loadGiet">记住密码 <a href="" class="rem">
+                        忘记密码?</a></p>
+
+                <!-- <p><input type="password" placeholder="请6-16输入密码，数字字母组成"
+                        pattern="^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$" required="required" name="psw1" /></p> -->
+                <p><button id="submit" onclick="login()"><a href="./index.html"> 登录</a></button></p>
+            </form>
+        </div>
+    </section>
     <!-- 底部 -->
     <footer class="foot">
         <section class="wrap">
             <div class="fix">
-                <dl><img src="./../img/code.png" width="160" height="160" /></dl>
+                <dl><img src="./img/code.png" width="160" height="160" /></dl>
                 <dl>
-                    <dt><img src="./../img/logoImg.jpg" /></dt>
+                    <dt><img src="./img/logoImg.jpg" /></dt>
                     <dd>全球酷玩试用导购平台<br>酷·新奇·好玩·品质</dd>
                     <dd>微信添加“JguoJguo” <br>获取我们的服务。</dd>
                 </dl>
@@ -81,3 +103,21 @@
 </body>
 
 </html>
+<script src="./myCookie.js"></script>
+<script src="./load.js"></script>
+<script>
+    var user = document.getElementsByClassName("userName")[0]
+    var psw = document.getElementsByClassName("password")[0]
+    user.onblur = function () {
+        if (user.value != 'admin') {
+            alert('用户名不存在')
+        }
+    }
+    psw.onblur = function () {
+        if (psw.value != 123456) {
+            alert('密码错误')
+        }
+    }
+
+
+</script>

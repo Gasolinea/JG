@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="./../css/base.css">
     <link rel="stylesheet" href="./../css/play/主页.css">
     <link rel="stylesheet" href="./../css/play/swiper-bundle.min.css">
-    <style>
-        
-    </style>
+    <link rel="stylesheet" href="./../css/use试用.css">
+   <link rel="stylesheet" href="./../css/themes.css">
+    
+   
 </head>
      
 <body>
@@ -26,7 +27,7 @@
                     <li><a href="./主页.html">首页</a></li>
                     <li><a href="./index.html">酷玩</a></li>
                     <li><a href="./../guid导航/index(new).html">导购</a></li>
-                    <li><a href="use/index.html">试用</a></li>
+                    <li><a href="./../use试用/detail.html">试用</a></li>
                     <li><a href="report/index.html">报告</a></li>
                 </ul>
             </nav>
@@ -36,6 +37,20 @@
     </header>
     <!-- 图片 -->
     <div class="bpic">
+        <section class="focus">
+            <div class="wrap1 focus-info">
+                <h2 style="font-size: 25px;">幻响小贝HiFi2.1音箱</h2>
+                <p class="label">
+                    <span>126人申请</span>
+                    <span>￥599</span>
+                    <span>20台</span>
+                </p>
+                <p class="time">申请时间剩余：13天5小时37分钟</p>
+                <p class="btn">
+                    <a href="">立即申请</a>
+                </p>
+            </div>
+        </section>
     </div>
     <!-- 轮播图 -->
       
@@ -74,15 +89,13 @@
             
         </div>
         <!-- 如果需要分页器 -->
-        <div class="swiper-pagination"></div>
-        
-        <!-- 如果需要导航按钮 -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        
+        <div class="swiper-pagination"></div>        
         <!-- 如果需要滚动条 -->
         <!-- <div class="swiper-scrollbar"></div> -->
     </div>
+     <!-- 如果需要导航按钮 -->
+     <div class="swiper-button-prev"></div>
+     <div class="swiper-button-next"></div>
       <!-- 内容 -->
     <div class="tab">
         <div class="mnew tb">
@@ -277,6 +290,7 @@
 </html>
 <script src="./../js/play/主页.js"></script>
 <script src="./../js/play/swiper-bundle.min.js"></script>
+<script src=""></script>
 <script>
      var mySwiper = new Swiper ('.swiper', {
    direction: 'horizontal', // 垂直切换选项
@@ -285,19 +299,22 @@
    autoplay: {
      delay: 2000,
      stopOnLastSlide: false,
-    //  disableOnInteraction: true,
+   
+    disableOnInteraction: false,
      },
    
    loop: true, // 循环模式选项
    // 如果需要分页器
   pagination: {
     el: '.swiper-pagination',
+   dynamicBullets: true,
   },
    
    // 如果需要前进后退按钮
    navigation: {
      nextEl: '.swiper-button-next',
      prevEl: '.swiper-button-prev',
+
    },
    
    // 如果需要滚动条

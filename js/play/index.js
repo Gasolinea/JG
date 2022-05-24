@@ -1,13 +1,15 @@
 
- var tbs=document.querySelectorAll('.tb')
- console.log(tbs);
+ var tas=document.querySelectorAll('.ta')
+ console.log(tas);
 //  this.className='index1'      
- for(var i=0;i<tbs.length;i++){
- tbs[i].onclick=function(){
-     for(var i=0;i<tbs.length;i++){
-        tbs[i].className='index'
+ for(var i=0;i<tas.length;i++){
+ tas[i].onclick=function(){
+     for(var i=0;i<tas.length;i++){
+        tas[i].className='index'
      }
-     this.className='index1'      
+     this.backgroundColor='red';
+    //  this.style.borderBottom='red'
+    //  border-bottom: 5px solid #FE5431;
  }
  
 }

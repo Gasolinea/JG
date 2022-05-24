@@ -35,7 +35,7 @@
     margin: 0 10px 0 10px;
     line-height: 50px;
     color: #999;
-    border-bottom: 5px solid #FE5431;
+    /* border-bottom: 5px solid #FE5431; */
     margin: auto; 
 }
 .con{
@@ -253,6 +253,9 @@
  margin: auto;
  margin-top: 20px;
  border-radius: 50%;
+}
+.tb:hover div{
+    color: #FE536A;
 }
 
 

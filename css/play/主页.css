@@ -262,19 +262,71 @@
 .bpic{
     width: 1200px;
     height: 300px;
-    background-color: #999;
-    background: url(./../img/original.jpg) -150px 0px;
+    background-color: rgb(216, 21, 21);
+    background: url(./../img/original.jpg) -350px 0px ;
     margin: auto;
+    margin-top: 5px; 
 }
+
 .swiper {
     width: 1200px;
-    height: 430px;
+    height: 530px;
     /* background-color: #999; */
     margin: auto;
-    margin: 2px;
+    margin: 5px;
 }  
 .swiper img{
     width: 100%;
     height: 100%;
+    border-radius: 8px;
+}
+.swiper{
+    /* --swiper-theme-color: #ca172b; */
+    /* --swiper-navigation-color: #e31162; */
+    --swiper-navigation-size: 150px;/* 设置按钮大小 */
+  }
+  .swiper-button-prev
+  {
+     /* background-color: #FE536A; */
+     position: relative !important;
+     top: -302px !important;
+     left: 90px !important;
+    
+  }
+  .swiper-button-next{
+    /* background-color: #FE536A; */
+    position: absolute !important;
+    right: 100px !important;
+    top: 629px !important;
+   
+  }
+.focus {
+    /* background: url(./img/original.jpg) no-repeat center top; */
+    height: 300px;
+    overflow: hidden; 
+    color: #FE536A;
+
+  }
+
+.wrap1 {
+    /* background-color: #FE536A; */
+    width: 1000px;
+    margin: 0 auto;
+    text-align: right;
+    position: relative;
+    top: 30px;
+    color: rgb(244, 237, 237);
+    font-size: 25px;
+}
+.btn a{
+   background-color: rgb(229, 49, 49) !important;
+   width: 200px;
+   display: inline-block;
+   text-align: center;
+   margin-top: 0px;
+}
+.label span{
+    margin:0px 0px;
+  display: inline-block;
 }
 

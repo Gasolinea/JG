@@ -28,7 +28,9 @@ nav ul{
     margin: auto;
    
 }
-
+ .tb a:hover{
+     color: #FE5431 !important;
+ }
 .index{
     width: 160px;
     display: inline-block;
@@ -43,7 +45,8 @@ nav ul{
     margin: 0 10px 0 10px;
     line-height: 50px;
     color: #999;
-    border-bottom: 5px solid #FE5431;
+    /* border-bottom: 5px solid #FE5431; */
+    /* color: #FE5431; */
     margin: auto; 
 }
 
